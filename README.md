@@ -16,7 +16,7 @@ php artisan serve
 ## Diegimas į CloudPanel
 
 Kiekvienas `push` į `master` paleidžia `.github/workflows/deploy.yml`, kuris per SSH
-prisijungia prie serverio ir atnaujina kodą (`git reset --hard origin/main`,
+prisijungia prie serverio ir atnaujina kodą (`git reset --hard origin/master`,
 `composer install`, `npm run build`, migracijos, cache).
 
 ### 1. Svetainė CloudPanel'e
