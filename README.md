@@ -15,7 +15,7 @@ php artisan serve
 
 ## Diegimas į CloudPanel
 
-Kiekvienas `push` į `main` paleidžia `.github/workflows/deploy.yml`, kuris per SSH
+Kiekvienas `push` į `master` paleidžia `.github/workflows/deploy.yml`, kuris per SSH
 prisijungia prie serverio ir atnaujina kodą (`git reset --hard origin/main`,
 `composer install`, `npm run build`, migracijos, cache).
 
@@ -83,4 +83,4 @@ GitHub → repo **Settings → Secrets and variables → Actions** sukurkite:
 | `SSH_KEY`     | privataus rakto `cloudpanel_deploy` turinys      |
 | `DEPLOY_PATH` | pvz. `/home/reception/htdocs/reception.example.lt` |
 
-Po to kiekvienas `push` į `main` (arba rankinis paleidimas **Actions → Deploy to CloudPanel → Run workflow**) atnaujins svetainę.
+Po to kiekvienas `push` į `master` (arba rankinis paleidimas **Actions → Deploy to CloudPanel → Run workflow**) atnaujins svetainę.
